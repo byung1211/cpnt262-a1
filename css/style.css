@@ -96,14 +96,20 @@ nav.menu {
   display:none;
   position:absolute;
   right:0px;
-  top:72px;
+  top:69px;
   width:200px;
   height: 250px;
   z-index: 1;
   background-color:#DCDCDC;
 }
-nav.show {
+#menu-close-icon {
+  display:none;
+}
+.show {
   display: block !important;
+}
+.hide {
+  display: none !important;
 }
 nav.menu ul {
   display:flex;
@@ -489,16 +495,3 @@ main.gallery {
 .caption label input[type=checkbox]:checked + i {
   filter: unset;
 }
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
