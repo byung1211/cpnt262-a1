@@ -1,5 +1,504 @@
 /**
-* Description: CPNT262 Assignment 1
+* Description: CPNT262 Assignment 1 
+*              I have customized the previous assignment.
 * Author: Byung Uk An
 * Date: 2021.10.16
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/****************************************************************************/
+/*********                 Common Styles                            *********/
+/****************************************************************************/
+
+/* Common style -  start */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+body {
+  padding: 0px;
+  margin: 0px;
+  min-height:100vh;
+  background-color:#DCDCDC;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Gothic', Arial, sans-serif;
+}
+p {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+li {
+  font-family: Arial, sans-serif;
+}  
+/* Common style -  end */
+
+
+/****************************************************************************/
+/*********          Navigation & Footer Styles for All pages        *********/
+/****************************************************************************/
+
+/* Main Header (Logo, Title, Navigation) shared by all pages  - start */
+@media screen and (max-width: 400px) {
+  .title span {
+    display:none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .main-header {
+    flex-direction: column;
+    justify-content: start !important;
+  }
+  .title {
+    width:100%;
+  }
+  .hero-section {
+    height:300px !important;
+  }
+}
+.main-header{
+  min-width: 450px;
+  color:#ffffff;
+  background-color:#24252A;
+  align-items: center;
+  display:flex;
+  justify-content: space-between;
+  font-size: 2.5rem;
+  padding: 10px 15px 0px 20px;
+}
+
+/* Title - start */
+.title {
+  min-width: 450px;
+  max-width: 600px;
+  display:flex;
+}
+img.logo {
+  width:80px;
+  background-color:#ffffff;
+  border-radius: 6px;
+  cursor:pointer;
+}
+.title span {
+  padding: 0px 15px;
+  white-space: nowrap;
+}
+/* Title - end */
+
+/* Menu - start */
+.menu-btn {
+  display:block;
+  position:absolute;
+  right:30px;
+  top:12px;
+  cursor:pointer;
+}
+nav.menu {
+  display:none;
+  position:absolute;
+  right:0px;
+  top:72px;
+  width:200px;
+  height: 250px;
+  z-index: 1;
+  background-color:#DCDCDC;
+}
+nav.show {
+  display: block !important;
+}
+nav.menu ul {
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction: column;
+  justify-content: start;
+  font-size: 1.5rem;
+  margin: 0px 0px;
+}
+
+nav.menu ul li {
+  padding: 10px 0px;
+  height:50px;
+  list-style-type: none;
+}
+nav.menu ul li a{
+  color:#24252A;
+  text-decoration: none;
+}
+nav.menu ul li a:hover {
+  color:#fd5949;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+/* Menu - end */
+/* Main Header shared by all pages  - end */
+
+
+/* Footer shared by all pages - start */
+footer {
+  margin-top: 100px;
+  margin-bottom:0;
+  background-color:hsla(0,10%,9%,0.9);
+}
+
+.sociallinks {
+  padding:10px; 
+  margin:0;
+  text-align:center;
+
+  background-color: #ffffff;
+}
+.copyright {
+  color:#ffffff;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  padding-top:20px;
+  padding-bottom:40px;
+  margin:0px;
+  text-align:center;
+}
+
+.social-icon {
+  font-size:2.1rem;
+  margin:0 5px;
+  cursor: pointer;
+}
+
+.fb-color {
+  color:#2d55da;
+}
+
+.twitter-color {
+  color:#1DA1F2;
+}
+/* Footer shared by all pages  - end */
+
+
+/****************************************************************************/
+/*********                 Custom Styles for Eash Page              *********/
+/****************************************************************************/
+
+/* Hero Section - start */
+
+.hero-section {
+  height:100vh;
+  width:100%;
+  min-width:300px;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url('../images/wallpaperflare.com_wallpaper.jpg');
+}
+.call-section {
+  color: #ffffff;
+  position: absolute;
+  top: 5vw;
+  left:5vw;
+}
+.call-section h1 {
+  font-size:2rem;
+}
+.call-section p {
+  font-size:1rem;
+  margin: 20px 0;
+}
+.call-section a {
+  color: #fd5949;
+  background-color:#000;
+  padding: 5px 10px;
+  font-family: Verdana;
+  font-weight:600;
+  font-size:1.5rem;
+  text-align: center;
+  text-decoration: none;
+  border: solid 1px #fd5949;
+  border-radius: 20px;
+}
+.call-section a:hover {
+  border: solid 3px #fd5949;
+}
+/* Hero Section - End */
+
+
+/* Home page - start */
+main.home {
+  margin: 30px 10%;
+}
+main.home header {
+  text-align: center;
+}
+article {
+  margin-top: 50px;
+  text-align:center;
+}
+article aside {
+  width: 30%;
+  padding: 25px;
+  float: right;
+  text-align: center;
+}
+aside img {
+  width: 100%;
+  height: 100%;
+}
+article p {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.0rem;
+  text-align: left;
+}
+.half-width {
+  width:45%
+}
+.full-width {
+  width:100%
+}
+/* Home page - end */
+
+
+/* About page - start */
+main.about {
+  margin: 30px 10%;
+}
+main.about header {
+  text-align: center;
+}
+/* About page - end */
+
+
+/* 404 error page - start */
+body.error404 {
+  background: no-repeat url("../images/51285701074_1fcd43dd11_k-1024x643.jpg");
+  background-size:cover;
+  color: #DCDCDC;
+}
+
+body.error404 main {
+  margin:12vw 30vw;
+}
+body.error404 main h1 {
+  font-family: 'Gothic', Arial, sans-serif;
+}
+body.error404 main p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body.error404 main a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+  background-color:black;
+  text-decoration:none;
+  color:orange;
+  padding:5px 15px;
+  border: #DCDCDC 1px solid;
+  border-radius: 10px;
+}
+/* 404 error page - end */
+
+
+/* Contact page - start */
+main.contact{
+  text-align: center;
+}
+form {
+    margin: auto;
+    padding: 30px 20px;
+    max-width: 400px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+fieldset {
+  border: 0;
+  line-height:2.5em;
+  text-align: left;
+}
+legend {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-align:center;
+  background-color: #000;
+  color: #fff;
+  padding: 8px 10px;
+  margin-bottom:15px;
+}
+label {
+  font-family: sans-serif;
+}
+input {
+  font-family: sans-serif;
+  height: 1.5em;
+}
+textarea{
+  width: 100%;
+}
+div.button {
+  width: 100%;
+  text-align: center;
+}
+button.button {
+  border: none;
+  color: white;
+  background-color: #008CBA;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: -5px;
+}
+/* Contact page - end */
+
+
+/* Services page - start */
+@supports (display: grid) {
+  section.service-list { 
+    max-width: 10000px !important;
+    margin: 0 !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+  }
+  article.service-item {
+    margin: 0;
+  }
+}
+main.services {
+  text-align: center;
+}
+section.service-list {
+  max-width: 500px;
+  margin: 0 auto;
+  padding:0px 50px;
+}
+article.service-item {
+  display: flex;
+  flex-flow: column;
+  border:  1px solid black;
+  border-radius: 1rem;
+  padding: 1em 1rem 1rem 1rem;
+  background-color: #ffffff;
+}
+article.service-item img {
+  width: 100%;
+}
+article.service-item p {
+  margin: 5px 5px;
+}
+article.service-item ul {
+  text-align: left;
+  margin-left: 30px;
+}
+article.service-item a {
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.3);
+  margin-top:20px;
+  margin-bottom:10px;
+  border: solid 1px #000;
+}
+article.service-item a:hover {
+  font-weight: 600;
+}
+article.service-item a i {
+  opacity:0.7;
+  color:#00008b;
+}
+/* Services page - end */
+
+
+/****************************************************************************/
+/*********                  Image Gallery Styles                    *********/
+/****************************************************************************/
+
+.main-header h1{
+  color:#ffffff;
+  font-family:Montserrat;
+  font-weight:600;
+  font-size:3rem;
+  padding:20px;
+  margin:0px 0px 30px 0px;
+  text-align: center;
+  background-color:hsla(0,10%,9%,0.9);
+}
+.sub-header h3{
+  text-align: center;
+  padding:20px;
+  font-family:monospace;
+  font-size:2rem;
+}
+
+main.gallery {
+  display:grid;
+  margin: 0 auto;
+  padding: 0 4ch;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(350px, 1fr));
+  grid-column-gap: 50px;
+  grid-row-gap: 70px;
+}
+
+.gallery figure {
+  margin: 0;
+}
+
+.gallery figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caption {
+  width:100%;
+  height:30px;
+  padding:5px 10px;
+  background-color: #fff;
+  display:inline-block;
+}
+
+.gallery figure i {
+  float:right;
+  margin:-18px 5px 5px 5px;
+  font-size:1.4rem;
+}
+
+.insta-color {
+    color: transparent;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.gallery figure i{
+  filter: grayscale(90%);
+}
+.gallery figure i:hover {
+  filter:unset;
+}
+
+.caption label input[type=checkbox]{
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.caption label input[type=checkbox] + i {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+.caption label input[type=checkbox]:checked + i {
+  filter: unset;
+}
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete

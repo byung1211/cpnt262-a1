@@ -4,3 +4,7 @@
 * Date: 2021.10.16
 */
 
+ function showMenu() {
+  var navbar = document.getElementById("menu");
+  navbar.classList.toggle("show");
+}
