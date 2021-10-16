@@ -105,6 +105,12 @@ nav.menu {
 #menu-close-icon {
   display:none;
 }
+#menu-close-icon:hover {
+  color:#fd5949;
+}
+#menu-open-icon:hover {
+  color:#fd5949;
+}
 .show {
   display: block !important;
 }
